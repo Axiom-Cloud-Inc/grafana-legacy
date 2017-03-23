@@ -18,7 +18,7 @@ class GettingStartedPanelCtrl extends PanelCtrl {
     this.steps = [];
 
     this.steps.push({
-      title: 'Install Grafana',
+      title: 'Install AE Plots',
       icon: 'icon-gf icon-gf-check',
       href: 'http://docs.grafana.org/',
       target: '_blank',
