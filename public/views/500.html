@@ -12,25 +12,17 @@
 		<link rel="stylesheet" href="[[.AppSubUrl]]/public/css/grafana.dark.min.css">
 
     <link rel="icon" type="image/png" href="[[.AppSubUrl]]/public/img/fav32.png">
-
-		<base href="[[.AppSubUrl]]/" />
-
+    <base href="[[.AppSubUrl]]/" />
   </head>
-
-	<body>
-
-		<div class="page-container">
-			<div class="page-header">
-				<h1>
-					Server side error :(
-				</h1>
-			</div>
-
-			<h4>[[.Title]]</h4>
-
-			<pre>[[.ErrorMsg]]</pre>
-
-		</div>
-	</body>
-
+  <body>
+    <div class="page-container">
+      <div class="page-header">
+        <h1>Server side error :(</h1>
+      </div>
+      <h4>[[.Title]]</h4>
+      [[if .ErrorMsg]]
+        <pre>[[.ErrorMsg]]</pre>
+      [[end]]
+    </div>
+  </body>
 </html>
