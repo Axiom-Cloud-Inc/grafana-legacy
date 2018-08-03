@@ -12,4 +12,4 @@ RUN grep -rl '<title>Grafana</title>' /usr/share/grafana/public | xargs sed -i '
 
 RUN grep -rl '\[hidden\],template' /usr/share/grafana/public/build | xargs sed -i 's/\[hidden\],template/\[hidden\],template,footer/g'
 
-# RUN grep -rl '.pluginlist-section{.*}' /usr/share/grafana/public/build | xargs sed -i 's/.pluginlist-section{.*}/.pluginlist-section{display:none}/g'
+RUN grep -rl '.pluginlist-section{margin-bottom:1rem}' /usr/share/grafana/public/build | xargs sed -i 's/.pluginlist-section{margin-bottom:1rem}/.pluginlist-section{display:none} .sidemenu__bottom .sidemenu-item:last-of-type {display: none}/g'
