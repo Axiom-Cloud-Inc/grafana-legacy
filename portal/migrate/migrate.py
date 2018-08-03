@@ -171,6 +171,10 @@ if __name__ == "__main__":
 
     client = influx.InfluxDB(url=INFLUX_URL, precision="s")
     client.create_database("cwp")
+
+    # REMOVE BEFORE USING ON THE ACTUAL DATABASE
     write_spoofed_rbimage(START, END)
     write_spoofed_perfest(START, END)
+    ############################################
+
     main()
